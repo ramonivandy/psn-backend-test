@@ -19,6 +19,9 @@ There is step for running the application:
 - Run `docker-compose exec app php artisan migrate:fresh`
 - Application will running on `http://localhost/`
 
+## Postman Collection
+- https://elements.getpostman.com/redirect?entityId=4517781-7af61de4-7f61-4a31-a134-e47e2f009ead&entityType=collection
+
 
 ## API Reference
 
