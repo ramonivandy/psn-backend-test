@@ -11,12 +11,22 @@ class CustomerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $customer = Customer::all();
+        $page = $request->input('page', 1);
+        $size = $request->input('size', 10);
+
+        $customers = Customer::with('address')->paginate($size, ['*'], 'page', $page);
+
         return response()->json([
-            'success' => true,
-            'data'     => $customer
+            'success'   => true,
+            'data'      => $customers->items(),
+            'meta'      => [
+                'current_page'  => $customers->currentPage(),
+                'last_page'  => $customers->lastPage(),
+                'per_page'  => $customers->perPage(),
+                'total'  => $customers->total(),
+            ]
         ]);
     }
 

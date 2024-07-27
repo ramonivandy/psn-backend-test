@@ -28,4 +28,4 @@ Route::delete('/customers/{id}', [CustomerController::class, 'destroy']);
 
 Route::post('/address', [AddressController::class, 'store']);
 Route::put('/address/{id}', [AddressController::class, 'update']);
-Route::delete('/address{id}', [AddressController::class, 'destroy']);
+Route::delete('/address/{id}', [AddressController::class, 'destroy']);
