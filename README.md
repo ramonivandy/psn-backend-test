@@ -11,16 +11,16 @@ There is step for running the application:
 - Application will run on `http://localhost:8000/`
 
 ## Running on Docker
-- Cllone the repository
-- Set up `docker-compose.yaml`
-- Set up `.env`
+- Clone the repository
+- Copy `env.example` and rename to `.env` after that set up `.env` database as `docker-compose.yaml` config
+- Run `composer install` to install all depedency
 - Run `php artisan config:clear` & `php artisan cache:clear`
 - Run docker compose `docker-compose up --build -d`
 - Run `docker-compose exec app php artisan migrate:fresh`
 - Application will running on `http://localhost/`
 
 ## Postman Collection
-- https://elements.getpostman.com/redirect?entityId=4517781-7af61de4-7f61-4a31-a134-e47e2f009ead&entityType=collection
+- https://gold-meteor-147640.postman.co/workspace/PSN-Backend-Test-API~8fd859a4-3a2e-4346-af4b-72e058774659/collection/4517781-7af61de4-7f61-4a31-a134-e47e2f009ead?action=share&creator=4517781
 
 
 ## API Reference
